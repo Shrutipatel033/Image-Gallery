@@ -1,0 +1,58 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px 10%;
+}
+.buttons{
+    padding: 30px;
+}
+button{
+    padding: 15px 10px;
+    margin-right: 20px;
+    color: #fff;
+    background-color: #333;
+    font-size: 20px;
+    border-radius: 6px;
+    border: none;
+    outline: none;
+    border: 1px solid#333;
+    cursor: pointer;
+}
+img {
+    width: 300px;
+    height: 200px;
+    background-size: cover;
+    object-fit: cover;
+    cursor: pointer;
+    transition: 0.5s;
+}
+img.show{ 
+    animation: animate 0.3s ease
+}
+img.hide{
+    display: none;
+}
+
+@keyframes animate {
+    0%{
+        transform: scale(0);
+    }100%{
+        transform: scale(1);
+    }
+    
+}
+img:hover{
+    transform: scale(1.1)
+}
+.image-container{
+    display: grid;
+    grid-template-columns: repeat(4 , 1fr);
+    gap: 20px;
+}
